@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Simple Homepage - Alarado | devChallenges.io</title>
+  </head>
+
+  <body class="text-[18px] font-['Poppins'] bg-white text-[#223344] px-10 dark:bg-[#111729] dark:text-white transition-colors">
+    <header class="flex justify-between items-center py-4">
+      <!-- logo -->
+      <div>
+        <!-- light mode  -->
+        <img class="block dark:hidden" src="./resources/logo-light.svg" alt="">
+        <img class="hidden dark:block" src="./resources/logo-dark.svg" alt="">
+      </div>
+
+      <!-- desktop navbar -->
+      <div class="hidden md:block">
+        <nav>
+          <ul class="flex gap-8 font-medium text-[1.125rem]">
+            <li
+              class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+            >
+              <a href="#">About us</a>
+            </li>
+            <li
+              class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+            >
+              <a href="#">Product</a>
+            </li>
+            <li
+              class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+            >
+              <a href="#">Resource</a>
+            </li>
+            <li
+              class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+            >
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- mobile hamburger -->
+      <div class="md:hidden">
+        <button id="menu-button" aria-label="Open menu" class="text-white p-2 rounded-full">
+          <img aria-hidden="true" src="./resources/hamburger-button.svg" alt="menu" />
+        </button>
+
+        <button class="hidden" id="close-btn" aria-label="Close menu">
+          <img src="./resources/close-button.svg" alt="" />
+        </button>
+      </div>
+
+      <!-- desktop toggle -->
+      <div
+        class="theme-toggle hidden md:flex gap-4 items-center border bg-[#111729] rounded-full p-1"
+      >
+        <img aria-hidden="true" src="./resources/Moon_fill_light.svg" alt="moon fill light" />
+        <img
+          class="border bg-white rounded-full"
+          src="./resources/Sun_fill.svg"
+          alt="sun fill"
+        />
+      </div>
+    </header>
+
+    <!-- mobile navbar -->
+    <nav class="hidden" id="mobile-menu">
+      <ul class="flex flex-col gap-8 font-medium text-[1.125rem]">
+        <li
+          class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+        >
+          <a href="#">About us</a>
+        </li>
+        <li
+          class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+        >
+          <a href="#">Product</a>
+        </li>
+        <li
+          class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+        >
+          <a href="#">Resource</a>
+        </li>
+        <li
+          class="hover:text-[#2A4DD0] hover:underline hover:underline-offset-4"
+        >
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+
+      <!-- mobile toggle -->
+      <div
+        class="theme-toggle flex w-fit gap-4 items-center border bg-[#111729] rounded-full p-1 mt-4"
+      >
+        <img src="./resources/Moon_fill_light.svg" alt="moon fill light" />
+        <img
+          class="border bg-white rounded-full"
+          src="./resources/Sun_fill.svg"
+          alt="sun fill"
+        />
+      </div>
+    </nav>
+
+    <main class="py-10">
+      <div class="flex flex-col md:flex-row justify-between gap-4">
+        <div class="order-2 md:order-1">
+          <!-- info  -->
+          <div class="flex flex-col gap-4">
+            <!-- hero section -->
+            <div>
+              <p class="text-[0.875rem] font-medium py-2">
+                😎 SIMPLE WAY TO COMMUNICATE
+              </p>
+              <h1 class="text-[3.75rem] font-bold py-2">
+                Actions for <br />
+                Accessibility in <br />
+                Design
+              </h1>
+              <p class="font-medium py-2">
+                The fastest way to build and deploy websites with resusable
+                <br />
+                components.
+              </p>
+            </div>
+
+            <!-- get started and live demo buttons -->
+            <div class="flex gap-4">
+              <button
+                class="bg-[#2A4DD0] text-[1rem] rounded-xl font-medium text-white px-6 py-3 hover:bg-[#1a3bb0] transition-colors"
+              >
+                GET STARTED
+              </button>
+              <button
+                class="border underline underline-offset-8 decoration-2 font-medium text-[1rem] text-[#2A4DD0] border-none rounded-xl"
+              >
+                Get live demo
+              </button>
+            </div>
+
+            <!-- cards section  -->
+            <div class="flex gap-4 py-4 text-[0.875rem] font-medium">
+              <div class="flex gap-2 items-center">
+                <img src="./resources/Done_ring_round_fill.svg" alt="" />
+                <p>No credit card required</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <img src="./resources/Done_ring_round_fill.svg" alt="" />
+                <p>No software to install</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- image -->
+        <div class="order-1 md:order-2">
+          <img
+            src="./resources/hero-image-simple-homepage.png"
+            alt="Hero Image"
+            class="w-full max-w-2xl"
+          />
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="author-info flex justify-center items-center gap-2 py-4 text-[0.875rem] font-medium"
+    >
+      Coded by <a href="#">Mahalakshmi</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
